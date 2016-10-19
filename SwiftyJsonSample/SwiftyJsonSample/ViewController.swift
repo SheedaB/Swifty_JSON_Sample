@@ -40,22 +40,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    enum ReadFileFromResourcesError: ErrorType {
+    enum ReadFileFromResourcesError: Error {
         
-        case FileDoesNotExist
-        case FailedToLoadData
-        case FailedToConvertData
+        case fileDoesNotExist
+        case failedToLoadData
+        case failedToConvertData
     }
     
-    func readFileFromResources(fileName: String, fileType: String, encoding: NSStringEncoding = NSUTF8StringEncoding) -> String {
+    func readFileFromResources(_ fileName: String, fileType: String, encoding: String.Encoding = String.Encoding.utf8) -> String {
         
-        let absoluteFilePath = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
+        let absoluteFilePath = Bundle.main.path(forResource: fileName, ofType: fileType)
         
         if let absoluteFilePath = absoluteFilePath {
             
-            if let fileData = NSData.init(contentsOfFile: absoluteFilePath) {
+            if let fileData = try? Data.init(contentsOf: URL(fileURLWithPath: absoluteFilePath)) {
                 
-                if let fileAsString = NSString(data: fileData, encoding: encoding) {
+                if let fileAsString = NSString(data: fileData, encoding: encoding.rawValue) {
                     return fileAsString as String
                 } else {
                     print("readFileFromResources failed on: \(fileName). Failed to convert data to String!")
@@ -90,18 +90,18 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return socialPosts.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("socialTableViewCell", forIndexPath: indexPath) as! SocialTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "socialTableViewCell", for: indexPath) as! SocialTableViewCell
         
-        cell.sharesText.text = String(socialPosts[indexPath.row].shares)
-        cell.descText.text = socialPosts[indexPath.row].desc
-        cell.socialIcon.image = UIImage(named: socialPosts[indexPath.row].type)
+        cell.sharesText.text = String(socialPosts[(indexPath as NSIndexPath).row].shares)
+        cell.descText.text = socialPosts[(indexPath as NSIndexPath).row].desc
+        cell.socialIcon.image = UIImage(named: socialPosts[(indexPath as NSIndexPath).row].type)
         
         return cell
     }

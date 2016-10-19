@@ -13,7 +13,8 @@
 		30235F6F1D81F9A600B8957B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30235F6E1D81F9A600B8957B /* Assets.xcassets */; };
 		30235F721D81F9A600B8957B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30235F701D81F9A600B8957B /* LaunchScreen.storyboard */; };
 		30235F7A1D81F9F600B8957B /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30235F791D81F9F600B8957B /* SocialTableViewCell.swift */; };
-		30235F7C1D81FCB400B8957B /* social_activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 30235F7B1D81FCB400B8957B /* social_activity.json */; };
+		30770C101DB71CB40061BB25 /* social_activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 30770C0F1DB71CB40061BB25 /* social_activity.json */; };
+		9D4D94D293D72C357A0AB64A /* Pods_SwiftyJsonSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3696D64F539FE6565E54B3B /* Pods_SwiftyJsonSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +26,22 @@
 		30235F711D81F9A600B8957B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30235F731D81F9A600B8957B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30235F791D81F9F600B8957B /* SocialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
-		30235F7B1D81FCB400B8957B /* social_activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = social_activity.json; path = ../../../../Downloads/SocialJSONTable/SocialJSONTable/social_activity.json; sourceTree = "<group>"; };
+		30770C0F1DB71CB40061BB25 /* social_activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = social_activity.json; sourceTree = "<group>"; };
 		992B2D2A97A84709ED74DD32 /* Pods-SwiftyJsonSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyJsonSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyJsonSample/Pods-SwiftyJsonSample.release.xcconfig"; sourceTree = "<group>"; };
 		C3696D64F539FE6565E54B3B /* Pods_SwiftyJsonSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyJsonSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB94FA499BD897F2F8776F94 /* Pods-SwiftyJsonSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyJsonSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyJsonSample/Pods-SwiftyJsonSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60DC60DDDF6AFC24766DA7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4D94D293D72C357A0AB64A /* Pods_SwiftyJsonSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		30235F5B1D81F9A600B8957B = {
@@ -56,7 +68,7 @@
 				30235F671D81F9A600B8957B /* AppDelegate.swift */,
 				30235F691D81F9A600B8957B /* ViewController.swift */,
 				30235F791D81F9F600B8957B /* SocialTableViewCell.swift */,
-				30235F7B1D81FCB400B8957B /* social_activity.json */,
+				30770C0F1DB71CB40061BB25 /* social_activity.json */,
 				30235F6B1D81F9A600B8957B /* Main.storyboard */,
 				30235F6E1D81F9A600B8957B /* Assets.xcassets */,
 				30235F701D81F9A600B8957B /* LaunchScreen.storyboard */,
@@ -94,6 +106,7 @@
 				30235F621D81F9A600B8957B /* Resources */,
 				AE9033EE9A7A833DE5D4F863 /* [CP] Embed Pods Frameworks */,
 				D788D62D54B562973B5635E9 /* [CP] Copy Pods Resources */,
+				60DC60DDDF6AFC24766DA7C7 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -116,7 +129,8 @@
 				TargetAttributes = {
 					30235F631D81F9A600B8957B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3AG3YHAKP2;
+						DevelopmentTeam = S3SUATN5GB;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -146,7 +160,7 @@
 				30235F721D81F9A600B8957B /* LaunchScreen.storyboard in Resources */,
 				30235F6F1D81F9A600B8957B /* Assets.xcassets in Resources */,
 				30235F6D1D81F9A600B8957B /* Main.storyboard in Resources */,
-				30235F7C1D81FCB400B8957B /* social_activity.json in Resources */,
+				30770C101DB71CB40061BB25 /* social_activity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +337,12 @@
 			baseConfigurationReference = CB94FA499BD897F2F8776F94 /* Pods-SwiftyJsonSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S3SUATN5GB;
 				INFOPLIST_FILE = SwiftyJsonSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.strings.SwiftyJsonSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -335,10 +351,12 @@
 			baseConfigurationReference = 992B2D2A97A84709ED74DD32 /* Pods-SwiftyJsonSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S3SUATN5GB;
 				INFOPLIST_FILE = SwiftyJsonSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.strings.SwiftyJsonSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
